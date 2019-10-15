@@ -19,10 +19,6 @@ def GetElem(singleCategory):
 	col = FilteredElementCollector(doc)
 	return col.OfCategory(singleCategory).WhereElementIsNotElementType().ToElements()
 
-def GetElems(multiCategory):
-	col = FilteredElementCollector(doc)
-	return col.WherePasses(multiCategory).WhereElementIsNotElementType().ToElements()
-
 t = Transaction(doc, "Transaction Name")
 t.Start()
 
