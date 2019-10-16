@@ -19,7 +19,7 @@ def GetElem(singleCategory):
 	col = FilteredElementCollector(doc)
 	return col.OfCategory(singleCategory).WhereElementIsNotElementType().ToElements()
 
-t = Transaction(doc, "Transaction Name")
+t = Transaction(doc, "Changing Workset of Link Instance")
 t.Start()
 
 # Workset: Links
@@ -59,6 +59,7 @@ for l in links:
 		param.Set(GetWorkset("Links-Site"))
 	elif "-BAL-" in l.Name:
 		param.Set(GetWorkset("Links-Clash Balls"))
-    
+
+print("Done changing the Workset of Link Instance!")
 t.Commit()
 print ("Well done!")
