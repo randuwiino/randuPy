@@ -1,4 +1,4 @@
-import clr
+git aimport clr
 from Autodesk.Revit.DB import *
 from Autodesk.Revit.DB.Architecture import *
 from Autodesk.Revit.UI import *

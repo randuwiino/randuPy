@@ -26,7 +26,7 @@ links = GetElem(BuiltInCategory.OST_RvtLinks)
 
 for l in links:
     name = l
-    param = l.GetParameters("Name")
+    param = l.get_Parameter(BuiltInParameter.ELEM_PARTITION_PARAM)
     if "-ARC-" in l.Name:
         param.Set(GetWorkset("Links-ARC"))
 
