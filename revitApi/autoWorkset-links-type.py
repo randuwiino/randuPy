@@ -28,9 +28,11 @@ links = GetElem(BuiltInCategory.OST_RvtLinks)
 
 for l in links:
 	name = l
-	param = l.get_Parameter(BuiltInParameter.ELEM_PARTITION_PARAM)
+#	param = l.get_Parameter(BuiltInParameter.ELEM_PARTITION_PARAM)
+	param = l.get_Parameter(BuiltInParameter.SYMBOL_NAME_PARAM)
 	if param.IsReadOnly: continue
 	if "-BRDG-" in l.Name:
+		if param.IsReadOnly: continue
 		param.Set(GetWorkset("Links-ARC"))
     
 t.Commit()
