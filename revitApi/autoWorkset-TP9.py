@@ -129,6 +129,7 @@ print ("Workset: Core (Railing) done!")
 stairRailings = GetElem(BuiltInCategory.OST_StairsRailing)
 for r in stairRailings:
 	param = r.get_Parameter(BuiltInParameter.ELEM_PARTITION_PARAM)
+    if param.IsReadOnly: continue
 	param.Set(GetWorkset("12_Core"))
 print ("Workset: Core (Stair Railing) done!")
 
