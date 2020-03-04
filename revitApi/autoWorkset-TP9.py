@@ -89,7 +89,7 @@ for e in walls:
 	param = e.get_Parameter(BuiltInParameter.ELEM_PARTITION_PARAM)
 	if param.IsReadOnly: continue
 	
-	if "STW-" in e.Name #or e.LookupParameter("Structural").AsValueString() == "Yes":
+	if "STW-" in e.Name: #or e.LookupParameter("Structural").AsValueString() == "Yes":
 		param.Set(GetWorkset("11_Structure"))
 	else:
 		param.Set(GetWorkset("10_Shell"))	
